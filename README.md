@@ -1,5 +1,6 @@
 # Smart-llm-routing
-
+Do check the images of screenshots for better understanding and also checkout my LinkedIn page for better understanding 
+LinkedIn link - https://www.linkedin.com/in/sparsh-garg14/
 
 # LLM Load Balancer Inference Architecture
 
@@ -28,3 +29,18 @@ This project demonstrates a scalable and fault-tolerant deployment architecture 
 
 ## 🏗️ Architecture
 
+      +----------------------+
+      |   Client / API Call  |
+      +----------+-----------+
+                 |
+          +------+------+
+          |   Load      |
+          |  Balancer   |
+          +------+------+
+                 |
+   +-------------+-------------+
+   |                           |
++------v------+ +--------v------+
+| EC2: LLM 1 | | EC2: LLM 2 |
+| (e.g., GPT)| | (e.g., Mistral)|
++-------------+ +---------------+
